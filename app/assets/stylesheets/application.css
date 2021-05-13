@@ -12,12 +12,13 @@
  *
  *= require bootstrap/dist/css/bootstrap.min
  *= require_tree .
- *= require_self */
+ *= require_self
+ */
 
 
  body , html {
-   padding:0; /*　追加*/
-   margin:0; /*　追加*/
+   padding:0;
+   margin:0;
    height: 100%;
  }
 
