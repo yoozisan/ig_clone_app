@@ -8,3 +8,4 @@
 <% end %>
 <%= link_to 'Edit', edit_user_path(@user.id) %>
 <%= link_to 'ブログ一覧', pictures_path %>
+<%= link_to '削除', user_path(@user.id), method: :delete, data: {confirm: "本当に削除しますか？"} %>

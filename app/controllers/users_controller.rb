@@ -21,10 +21,16 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+ 		redirect_to pictures_path, notice:"ユーザーを削除しました！"
+ 	end
+
   def update
     @user = User.find(params[:id])
     if @user.update(user_params)
-      redirect_to pictures_path, notice: "プロフィール画像を登録しました！"
+      redirect_to pictures_path, notice: "プロフィールを変更しました！"
     else
       render :edit
     end
