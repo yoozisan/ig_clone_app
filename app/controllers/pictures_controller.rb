@@ -12,7 +12,7 @@ class PicturesController < ApplicationController
       render :new
 		else
       if @picture.save
-        ContactMailer.contact_mail(@picture).deliver
+        # ContactMailer.contact_mail(@picture).deliver
         redirect_to pictures_path, notice: "ブログを作成しました！"
     	else
     		render :new
